@@ -27,6 +27,7 @@
 
     <!-- Styles -->
     <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/base.css" rel="stylesheet" />
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
 </head>
@@ -35,7 +36,36 @@
     <div class="relative flex min-h-screen w-full flex-col font-display group/design-root overflow-x-hidden">
         <div class="layout-container flex h-full grow flex-col">
 
-            <div id="header"></div>
+            <header>
+                <div class="container">
+                    <div class="header-content">
+                        <div class="logo-container">
+                            <a href="./index.html"><img class="logo-image" src="./img/new-logo.png"
+                                    alt="Al-Adl Foundation Logo" /></a>
+                            <h2 class="logo-text">مؤسسة العدل للمحاماة والاستشارات القانونية</h2>
+                        </div>
+                        <nav>
+                            <a href="./index.html">الصفحة الرئيسية</a>
+                            <a href="./services_page/services.html">خدمات قانونية</a>
+                            <a href="./publications_page/publications.html">منشورات</a>
+                            <a href="./contact_page/contact.html">تواصل</a>
+                            <button class="cta-button"
+                                onclick="window.location.href='./contact_page/contact.html#contact-form'">
+                                <span class="truncate">احجز استشارة</span>
+                            </button>
+                        </nav>
+                        <div class="mobile-menu-button">
+                            <button type="button" aria-label="Toggle menu">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
             <main class="flex-1">
                 <div class="hero-section">
@@ -145,12 +175,62 @@
                 </div>
             </main>
 
-            <div id="footer"></div>
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-grid">
+                            <div class="footer-brand">
+                                <div class="footer-logo">
+                                    <img src="./img/new-logo.png" alt="Al-Adl Foundation Logo" />
+                                    <h2>مؤسسة العدل</h2>
+                                </div>
+                                <p class="footer-description">مؤسسة قانونية متخصصة في تقديم الاستشارات والخدمات
+                                    القانونية بأعلى
+                                    معايير الجودة والاحترافية.</p>
+                            </div>
+                            <div class="footer-section">
+                                <h3>روابط سريعة</h3>
+                                <nav class="footer-nav">
+                                    <a href="./index.html">الصفحة الرئيسية</a>
+                                    <a href="./services_page/services.html">خدمات قانونية</a>
+                                    <a href="./publications_page/publications.html">منشورات</a>
+                                    <a href="./contact_page/contact.html">تواصل</a>
+                                </nav>
+                            </div>
+                            <div class="footer-section">
+                                <h3>تواصل معنا</h3>
+                                <div class="social-links">
+                                    <a href="https://api.whatsapp.com/send/?phone=201008902330&type=phone_number&app_absent=0"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                    <a href="mailto:mwsstaldl@gmail.com">
+                                        <i class="fab fa-google"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/profile.php?id=61560478169026&locale=ar_AR"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <p>©<span class="copyright-year">2025</span> مؤسسة العدل للمحاماة والاستشارات القانونية.
+                                جميع الحقوق محفوظة.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
         </div>
     </div>
     <script src="./js/main.js"></script>
-    <script src="./js/include.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/footer.js"></script>
     <script src="./js/animations.js"></script>

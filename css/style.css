@@ -1,8 +1,9 @@
 :root {
-  --color-primary: #061f37;
-  --color-secondary: #7b5d31;
-  --color-background-light: #f6f7f8;
-  --color-background-dark: #111921;
+  --color-primary: #ffffff;
+  --color-secondary: #f3c623;
+  --color-hover-text: #ffdf6d;
+  --color-background-light: #ffffff;
+  --color-background-dark: #000000;
   --color-gray-200: #e5e7eb;
   --color-gray-300: #d1d5db;
   --color-gray-400: #9ca3af;
@@ -10,71 +11,6 @@
   --color-gray-700: #374151;
   --color-gray-800: #1f2937;
   --color-gray-900: #111827;
-  --color-white: #ffffff;
-}
-
-body {
-  font-family: "Cairo", sans-serif;
-  background-color: var(--color-background-light);
-  color: var(--color-gray-800);
-  margin: 0;
-}
-
-button {
-  font-family: "Cairo", sans-serif;
-}
-
-.dark body {
-  background-color: var(--color-background-dark);
-  color: #e5e7eb;
-}
-
-/* Layout */
-.relative {
-  position: relative;
-}
-.flex {
-  display: flex;
-}
-.min-h-screen {
-  min-height: 100vh;
-}
-.w-full {
-  width: 100%;
-}
-.flex-col {
-  flex-direction: column;
-}
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
-.div-buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 3em;
-}
-
-a {
-  text-decoration: none;
-}
-
-.cta-button {
-  display: flex;
-  min-width: 120px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  height: 2.5rem;
-  padding: 0 1rem;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  font-size: 0.875rem;
-  font-weight: 700;
-  box-shadow: 0 10px 15px -3px rgba(6, 31, 55, 0.2);
-  transition: all 0.2s;
 }
 
 /* Hero Section */
@@ -85,7 +21,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--color-white);
+  color: var(--color-primary);
   padding: 1.5rem;
 }
 
@@ -163,11 +99,7 @@ a {
 /* Services Section */
 .services-section {
   padding: 4rem 0;
-  background-color: var(--color-white);
-}
-
-.dark .services-section {
-  background-color: var(--color-background-dark);
+  background-color: black;
 }
 
 .section-header {
@@ -178,21 +110,13 @@ a {
 .section-title {
   font-size: 1.875rem;
   font-weight: 700;
-  color: var(--color-gray-900);
-}
-
-.dark .section-title {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .section-description {
   font-size: 1.125rem;
-  color: var(--color-gray-600);
+  color: var(--color-primary);
   margin-top: 0.5rem;
-}
-
-.dark .section-description {
-  color: var(--color-gray-400);
 }
 
 .services-grid {
@@ -221,8 +145,7 @@ a {
   text-align: center;
   align-items: center;
   border-radius: 0.75rem;
-  border: 1px solid var(--color-gray-200);
-  background-color: var(--color-background-light);
+  background-color: var(--color-secondary);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   opacity: 0;
@@ -235,11 +158,6 @@ a {
   transform: translateY(0);
 }
 
-.dark .service-card {
-  background-color: rgba(17, 25, 33, 0.5);
-  border-color: var(--color-gray-700);
-}
-
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -247,17 +165,13 @@ a {
 
 .service-icon {
   font-size: 2.5rem;
-  color: var(--color-primary);
+  color: black;
 }
 
 .service-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-gray-900);
-}
-
-.dark .service-title {
-  color: var(--color-white);
+  color: black;
 }
 
 .services-section .cta-button {
@@ -276,11 +190,7 @@ a {
 /* Publications Section */
 .publications-section {
   padding: 4rem 0;
-  background-color: var(--color-background-light);
-}
-
-.dark .publications-section {
-  background-color: rgba(17, 25, 33, 0.5);
+  background-color: black;
 }
 
 .publications-grid {
@@ -306,8 +216,7 @@ a {
   flex-direction: column;
   padding: 1.5rem;
   border-radius: 0.75rem;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-gray-200);
+  background-color: var(--color-secondary);
   text-align: center;
   transition: all 0.3s ease;
   opacity: 0;
@@ -325,30 +234,17 @@ a {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.dark .publication-card {
-  background-color: var(--color-background-dark);
-  border-color: var(--color-gray-800);
-}
-
 .publication-title {
   font-weight: 700;
   font-size: 1.125rem;
-  color: var(--color-gray-900);
+  color: black;
   margin-bottom: 0.5rem;
-}
-
-.dark .publication-title {
-  color: var(--color-white);
 }
 
 .publication-excerpt {
   margin-top: auto;
   font-size: 0.875rem;
-  color: var(--color-gray-600);
-}
-
-.dark .publication-excerpt {
-  color: var(--color-gray-400);
+  color: black;
 }
 
 .publications-section .cta-button {
@@ -366,12 +262,8 @@ a {
 
 /* Testimonials Section */
 .testimonials-section {
-  background-color: var(--color-white);
+  background-color: black;
   padding: 4rem 0;
-}
-
-.dark .testimonials-section {
-  background-color: var(--color-background-dark);
 }
 
 .testimonials-grid {
@@ -397,8 +289,7 @@ a {
   flex-direction: column;
   padding: 1.5rem;
   border-radius: 0.75rem;
-  background-color: var(--color-background-light);
-  border: 1px solid var(--color-gray-200);
+  background-color: var(--color-secondary);
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
@@ -415,18 +306,9 @@ a {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.dark .testimonial-card {
-  background-color: rgba(17, 25, 33, 0.5);
-  border-color: var(--color-gray-800);
-}
-
 .testimonial-text {
-  color: var(--color-gray-700);
+  color: black;
   font-style: italic;
-}
-
-.dark .testimonial-text {
-  color: var(--color-gray-300);
 }
 
 .testimonial-author {
@@ -438,11 +320,7 @@ a {
 
 .author-name {
   font-weight: 600;
-  color: var(--color-gray-900);
-}
-
-.dark .author-name {
-  color: var(--color-white);
+  color: black;
 }
 
 /* Utility Classes */

@@ -1,8 +1,9 @@
 :root {
-  --color-primary: #061f37;
-  --color-secondary: #7b5d31;
-  --color-background-light: #f6f7f8;
-  --color-background-dark: #111921;
+  --color-primary: #ffffff;
+  --color-secondary: #f3c623;
+  --color-hover-text: #ffdf6d;
+  --color-background-light: #ffffff;
+  --color-background-dark: #000000;
   --color-gray-200: #e5e7eb;
   --color-gray-300: #d1d5db;
   --color-gray-400: #9ca3af;
@@ -10,7 +11,6 @@
   --color-gray-700: #374151;
   --color-gray-800: #1f2937;
   --color-gray-900: #111827;
-  --color-white: #ffffff;
 }
 
 /* Header */
@@ -18,7 +18,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.98);
+  background: black;
+  box-shadow: 0px 0px 15px 1px var(--color-secondary);
 }
 
 /* Navigation */
@@ -34,7 +35,7 @@ nav.mobile-nav-active {
   top: 105px;
   left: 0;
   right: 0;
-  background: rgba(246, 247, 248, 0.98);
+  background: black;
   backdrop-filter: blur(8px);
   padding: 2rem;
   gap: 1.5rem;
@@ -107,7 +108,7 @@ nav.mobile-nav-active a {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 0.25em;
   color: var(--color-primary);
 }
 
@@ -130,11 +131,11 @@ nav.mobile-nav-active a {
 .logo-container .logo-text {
   font-size: 0.625rem;
   font-weight: 700;
-  color: var(--color-gray-900);
+  color: var(--color-secondary);
 }
 
 .dark .logo-text {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 @media (min-width: 768px) {
@@ -157,12 +158,12 @@ nav.mobile-nav-active a {
 nav a {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--color-gray-900);
+  color: var(--color-secondary);
   transition: 0.2s;
 }
 
 nav a:hover {
-  color: var(--color-secondary);
+  color: var(--color-hover-text);
   transform: translateY(-5px);
   -webkit-transform: translateY(-5px);
   -moz-transform: translateY(-5px);
@@ -171,7 +172,7 @@ nav a:hover {
 }
 
 nav a.active {
-  color: var(--color-secondary);
+  color: var(--color-hover-text);
 }
 
 nav .cta-button:hover {
@@ -195,11 +196,11 @@ nav .cta-button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-gray-900);
+  color: var(--color-secondary);
 }
 
 .dark .mobile-menu-button button {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .mobile-menu-button svg {
