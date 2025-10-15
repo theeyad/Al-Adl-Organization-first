@@ -47,15 +47,12 @@ class ComponentLoader {
 // Initialize the component loader
 const loader = new ComponentLoader();
 
-// Load components when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-  // Use fixed paths for GitHub Pages compatibility
-  const scriptDir = document.querySelector('script[src*="include.js"]')?.src;
-  const scriptPath = scriptDir
-    ? scriptDir.substring(0, scriptDir.lastIndexOf("/") + 1)
-    : "";
-  const rootPath = scriptPath.replace("/js/", "/");
+  // Get current page path to build correct base
+  const basePath = window.location.pathname.includes("Al-Adl-Organization-first")
+    ? "/Al-Adl-Organization-first/"
+    : "/";
 
-  loader.loadComponent(`${rootPath}partials/header.html`, "header", "header");
-  loader.loadComponent(`${rootPath}partials/footer.html`, "footer", "footer");
+  loader.loadComponent(`${basePath}partials/header.html`, "header", "header");
+  loader.loadComponent(`${basePath}partials/footer.html`, "footer", "footer");
 });
