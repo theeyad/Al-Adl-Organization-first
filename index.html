@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة العدل</title>
+
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- service icons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/logo.png" />
+
+    <!-- Styles -->
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="relative flex min-h-screen w-full flex-col font-display group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+
+            <div id="header"></div>
+
+            <main class="flex-1">
+                <div class="hero-section">
+                    <img class="hero-background" src="./img/photo_1_2025-10-06_19-37-12.jpg" alt="placeholder">
+                    <div class="hero-content">
+                        <h1 class="hero-title">مؤسسة العدل للمحاماة والاستشارات القانونية</h1>
+                        <p class="hero-description">خبرة تثق بها وعدالة نحميها</p>
+                        <button class="cta-button"
+                            onclick="window.location.href='./contact_page/contact.html#contact-form'">
+                            <span class="truncate">احجز استشارة</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="services-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">ما نقوم به</h2>
+                            <p class="section-description">نقدم مجموعة من الخدمات القانونية المتخصصة</p>
+                        </div>
+                        <div class="services-grid">
+                            <a href="./services_page/services.html#service-egypt-saudi">
+                                <div class="service-card">
+                                    <span class="material-symbols-outlined service-icon">business_center</span>
+                                    <h3 class="service-title">خدمات الشركات</h3>
+                                </div>
+                            </a>
+                            <a href="./services_page/services.html#service-investors">
+                                <div class="service-card">
+                                    <span class="material-symbols-outlined service-icon">monetization_on</span>
+                                    <h3 class="service-title">خدمات المستثمرين والأجانب </h3>
+                                </div>
+                            </a>
+                            <a href="./services_page/services.html#service-industrial">
+                                <div class="service-card">
+                                    <span class="material-symbols-outlined service-icon">factory</span>
+                                    <h3 class="service-title">خدمات القطاع الصناعي</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center mt-12 div-buttons">
+                            <button class="cta-button mx-auto"
+                                onclick="window.location.href='./services_page/services.html'">
+                                <span class="truncate">جميع الخدمات</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publications-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">أحدث المنشورات</h2>
+                            <p class="section-description">مقالات ورؤى قانونية حديثة</p>
+                        </div>
+                        <div class="publications-grid">
+                            <div class="publication-card">
+                                <h3 class="publication-title">أهمية العقود التجارية</h3>
+                                <p class="publication-excerpt">نظرة على كيفية حماية العقود التجارية لمصالح الشركات...
+                                </p>
+                            </div>
+                            <div class="publication-card">
+                                <h3 class="publication-title">قانون العمل الجديد</h3>
+                                <p class="publication-excerpt">تحليل للتعديلات الأخيرة في قانون العمل وتأثيرها...</p>
+                            </div>
+                            <div class="publication-card">
+                                <h3 class="publication-title">حماية الملكية الفكرية</h3>
+                                <p class="publication-excerpt">خطوات أساسية لتسجيل وحماية علامتك التجارية...</p>
+                            </div>
+                        </div>
+                        <div class="text-center mt-12 div-buttons">
+                            <button class="cta-button mx-auto"
+                                onclick="window.location.href='./publications_page/publications.html'">
+                                <span class="truncate">جميع المنشورات</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">آراء عملائنا</h2>
+                            <p class="section-description">شهادات نعتز بها من عملائنا</p>
+                        </div>
+                        <div class="testimonials-grid">
+                            <div class="testimonial-card">
+                                <p class="testimonial-text">"خدمات ممتازة واهتمام بالتفاصيل. أنصح بهم بشدة."</p>
+                                <div class="testimonial-author">
+                                    <p class="author-name">محمد السيوفي</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p class="testimonial-text">"مهنية واحتراف في التعامل. فريق عمل متمكن."</p>
+                                <div class="testimonial-author">
+                                    <p class="author-name">ليلى السيوفي</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p class="testimonial-text">"الأفضل في مجال الاستشارات القانونية، خبرة واسعة وثقة."</p>
+                                <div class="testimonial-author">
+                                    <p class="author-name">علي السيوفي</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <div id="footer"></div>
+
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/include.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/animations.js"></script>
+</body>
+
+</html>

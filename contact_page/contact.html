@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة العدل - تواصل معنا</title>
+
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/logo.svg" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="contact.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="relative min-h-screen">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-container">
+                        <img class="logo-image"
+                            src="../img/photo_6_2025-10-06_19-37-12-removebg-preview-Picsart-AiImageEnhancer.png"
+                            alt="Al-Adl Foundation Logo" />
+                        <h2 class="logo-text">مؤسسة العدل للمحاماة والاستشارات القانونية</h2>
+                    </div>
+                    <nav>
+                        <a href="../index.html">الصفحة الرئيسية</a>
+                        <a href="../services_page/services.html">خدمات قانونية</a>
+                        <a href="../publications_page/publications.html">منشورات</a>
+                        <a href="./contact.html" class="active">تواصل</a>
+                        <button class="cta-button" onclick="window.location.href='./contact.html#contact-form'">
+                            <span class="truncate">احجز استشارة</span>
+                        </button>
+                    </nav>
+                    <div class="mobile-menu-button">
+                        <button>
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1 class="title">في مؤسسة العدل للمحاماة والاستشارات القانونية نؤمن أن العدالة رسالة نؤديها بإخلاص.
+                </h1>
+                <p class="description">يضم فريقنا نخبة من المحامين والمستشارين بقيادة:
+                    الأستاذ/ أحمد إسماعيل الغباشي والأستاذ/ أسامة دياب أمين والأستاذ/ محمود حسين السيد حيث نقدّم حلولًا
+                    قانونية دقيقة ومبتكرة تخدم عملاءنا في القضايا المدنية والتجارية والاستثمارية وتأسيس
+                    الشركات وصياغة العقود.</p>
+                <div class="grid-container">
+                    <div id="contact-form" class="contact-form">
+                        <div class="form-header">
+                            <h2>تواصل معنا</h2>
+                            <p>نحن هنا للمساعدة. تواصل معنا لأي استفسارات أو مساعدة قانونية.</p>
+                        </div>
+                        <form method="POST" action="#">
+                            <div class="form-group">
+                                <label class="form-label" for="name">الاسم الكامل</label>
+                                <input type="text" id="name" name="name" class="form-input"
+                                    placeholder="أحمد الغباشي" />
+                            </div>
+                            <div class="form-flex">
+                                <div class="form-group">
+                                    <label class="form-label" for="email">البريد الإلكتروني</label>
+                                    <input type="email" id="email" name="email" class="form-input"
+                                        placeholder="you@example.com" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="phone">رقم الهاتف</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input"
+                                        placeholder="+20 123 456 7890" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">الرسالة</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5"
+                                    placeholder="كيف يمكننا مساعدتك اليوم؟"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="submit-button">أرسل الرسالة</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3>بيانات الاتصال</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="location">
+                                    <span class="material-symbols-outlined icon">location_on</span>
+                                    <span>
+                                        مؤسسة العدل<br />
+                                        السعودية<br />
+                                        الرياض - الطائف
+                                    </span>
+                                </div>
+                                <div class="location">
+                                    <span class="material-symbols-outlined icon">location_on</span>
+                                    <span>
+                                        مؤسسة العدل<br />
+                                        مصر<br />
+                                        القاهرة - مدينة السادات
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="phone">
+                                    <span class="material-symbols-outlined icon">call</span>
+                                    <a href="tel:+966 54 171 3058" dir="ltr">+966 54 171 3058</a>
+                                </div>
+                                <div class="phone">
+                                    <span class="material-symbols-outlined icon">call</span>
+                                    <a href="tel:+20 100 890 2330" dir="ltr">+20 100 890 2330</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="material-symbols-outlined icon">email</span>
+                                <a href="mailto:info@al-adl.com">info@al-adl.com</a>
+                            </div>
+                        </div>
+
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464820.6142317064!2d46.544819211140385!3d24.725555344546843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1696599814133!5m2!1sar!2ssa"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-grid">
+                        <div class="footer-brand">
+                            <div class="footer-logo">
+                                <img src="../img/logo.svg" alt="Al-Adl Foundation Logo" />
+                                <h2>مؤسسة العدل</h2>
+                            </div>
+                            <p class="footer-description">مؤسسة قانونية متخصصة في تقديم الاستشارات والخدمات
+                                القانونية بأعلى معايير الجودة والاحترافية.</p>
+                        </div>
+                        <div class="footer-section">
+                            <h3>روابط سريعة</h3>
+                            <nav class="footer-nav">
+                                <a href="../index.html">الصفحة الرئيسية</a>
+                                <a href="../services_page/services.html">خدمات قانونية</a>
+                                <a href="../publications_page/publications.html">منشورات</a>
+                                <a href="./contact.html" class="active">تواصل</a>
+                            </nav>
+                        </div>
+                        <div class="footer-section">
+                            <h3>تواصل معنا</h3>
+                            <div class="social-links">
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>حقوق النسخ © 2025 مؤسسة العدل للمحاماة والاستشارات القانونية. جميع الحقوق محفوظة.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="contact.js"></script>
+</body>
+
+</html>
