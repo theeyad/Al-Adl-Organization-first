@@ -1,3 +1,4 @@
+/* Dark (Default) Theme */
 :root {
   --color-bg: #000000;
   --color-header-bg: #000000;
@@ -8,18 +9,28 @@
   --color-secondary-links: #ffffffcc;
   --color-icons: #ffffff;
   --color-icons-bg: #000000;
+  --color-black: #000000;
   --shadows: 0px 0px 15px 1px #f3c623;
   --transition-duration: 0.2s;
   --padding-right-left: 1.5em;
 }
 
-:root {
-  --color-primary: #ffffff;
-  --color-secondary: #f3c623;
-  --color-hover-text: #ffdf6d;
-  --color-background-light: #ffffff;
-  --color-background-dark: #000000;
-}
+/* Ligh Theme */
+/* :root {
+  --color-bg: #f6f7f9;
+  --color-header-bg: #ffffff;
+  --color-footer-bg: #061f37;
+  --color-primary: #061f37;
+  --color-primary-sec: #061f37dd;
+  --color-secondary: #000000;
+  --color-secondary-links: #ffffffcc;
+  --color-icons: #061f37;
+  --color-icons-bg: #e7e8ec;
+  --color-white: #ffffff;
+  --shadows: 0px 0px 15px 1px #f6f7f9;
+  --transition-duration: 0.2s;
+  --padding-right-left: 1.5em;
+} */
 
 /* Hero Section */
 .hero-section {
@@ -29,7 +40,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--color-primary);
   padding: 1.5rem;
 }
 
@@ -71,6 +81,7 @@
 }
 
 .hero-title {
+  color: var(--color-primary);
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -85,7 +96,7 @@
 
 .hero-description {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-secondary);
   margin-top: 0;
   margin-bottom: 2em;
   word-spacing: 4px;
@@ -94,6 +105,7 @@
 .hero-content .cta-button {
   font-size: 1.25rem;
   padding: 1.25em;
+  background-color: var(--color-primary);
 }
 
 .hero-content .cta-button:hover {
@@ -107,7 +119,6 @@
 /* Services Section */
 .services-section {
   padding: 4rem 0;
-  background-color: black;
 }
 
 .section-header {
@@ -123,7 +134,7 @@
 
 .section-description {
   font-size: 1.125rem;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   margin-top: 0.5rem;
 }
 
@@ -153,27 +164,33 @@
   text-align: center;
   align-items: center;
   border-radius: 0.75rem;
-  background-color: var(--color-secondary);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  background-color: var(--color-primary);
   opacity: 0;
   transform: translateY(20px);
   min-width: max-content;
+  transition: var(--transition-duration);
+  -webkit-transition: var(--transition-duration);
+  -moz-transition: var(--transition-duration);
+  -ms-transition: var(--transition-duration);
+  -o-transition: var(--transition-duration);
 }
 
 .service-card.animate {
   opacity: 1;
   transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .service-icon {
   font-size: 2.5rem;
-  color: white;
+  color: var(--color-icons);
   position: relative;
 }
 
@@ -189,7 +206,7 @@
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  background-color: black;
+  background-color: var(--color-icons-bg);
   border-radius: 50%;
   z-index: -1;
 }
@@ -197,12 +214,13 @@
 .service-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: black;
+  color: var(--color-black);
 }
 
 .services-section .cta-button {
   font-size: 1rem;
   padding: 1.2em;
+  background-color: var(--color-primary);
 }
 
 .services-section .cta-button:hover {
@@ -216,7 +234,6 @@
 /* Publications Section */
 .publications-section {
   padding: 4rem 0;
-  background-color: black;
 }
 
 .publications-grid {
@@ -242,7 +259,7 @@
   flex-direction: column;
   padding: 1.5rem;
   border-radius: 0.75rem;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   text-align: center;
   transition: all 0.3s ease;
   opacity: 0;
@@ -263,19 +280,20 @@
 .publication-title {
   font-weight: 700;
   font-size: 1.125rem;
-  color: black;
+  color: var(--color-black);
   margin-bottom: 0.5rem;
 }
 
 .publication-excerpt {
   margin-top: auto;
   font-size: 0.875rem;
-  color: black;
+  color: var(--color-black);
 }
 
 .publications-section .cta-button {
   font-size: 1rem;
   padding: 1.2em;
+  background-color: var(--color-primary);
 }
 
 .publications-section .cta-button:hover {
@@ -288,7 +306,6 @@
 
 /* Testimonials Section */
 .testimonials-section {
-  background-color: black;
   padding: 4rem 0;
 }
 
@@ -314,12 +331,16 @@
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
+  text-align: center;
   border-radius: 0.75rem;
-  background-color: var(--color-secondary);
-  transition: all 0.3s ease;
+  background-color: var(--color-primary);
   opacity: 0;
   transform: translateY(20px);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: var(--transition-duration);
+  -webkit-transition: var(--transition-duration);
+  -moz-transition: var(--transition-duration);
+  -ms-transition: var(--transition-duration);
+  -o-transition: var(--transition-duration);
 }
 
 .testimonial-card.animate {
@@ -329,12 +350,37 @@
 
 .testimonial-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-text {
-  color: black;
+  color: var(--color-black);
   font-style: italic;
+  position: relative;
+}
+
+.testimonial-text::before,
+.testimonial-text::after {
+  position: absolute;
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+}
+
+.testimonial-text::before {
+  content: "\f10e";
+  transform: translateX(1em);
+  -webkit-transform: translateX(1em);
+  -moz-transform: translateX(1em);
+  -ms-transform: translateX(1em);
+  -o-transform: translateX(1em);
+}
+
+.testimonial-text::after {
+  content: "\f10d";
+  transform: translate(-0.1em, 0em);
+  -webkit-transform: translate(-0.1em, 0em);
+  -moz-transform: translate(-0.1em, 0em);
+  -ms-transform: translate(-0.1em, 0em);
+  -o-transform: translate(-0.1em, 0em);
 }
 
 .testimonial-author {
@@ -346,7 +392,7 @@
 
 .author-name {
   font-weight: 600;
-  color: black;
+  color: var(--color-black);
 }
 
 /* Utility Classes */

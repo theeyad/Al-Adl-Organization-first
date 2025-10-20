@@ -1,16 +1,41 @@
+/* Dark (Default) Theme */
 :root {
-  --color-primary: #ffffff;
-  --color-secondary: #f3c623;
-  --color-hover-text: #ffdf6d;
-  --color-background-light: #ffffff;
-  --color-background-dark: #000000;
+  --color-bg: #000000;
+  --color-header-bg: #000000;
+  --color-footer-bg: #000000;
+  --color-primary: #f3c623;
+  --color-primary-sec: #ffdf6d;
+  --color-secondary: #ffffff;
+  --color-secondary-links: #ffffffcc;
+  --color-icons: #ffffff;
+  --color-icons-bg: #000000;
+  --color-black: #000000;
+  --shadows: 0px 0px 15px 1px #f3c623;
+  --transition-duration: 0.2s;
+  --padding-right-left: 1.5em;
 }
+
+/* Ligh Theme */
+/* :root {
+  --color-bg: #f6f7f9;
+  --color-header-bg: #ffffff;
+  --color-footer-bg: #061f37;
+  --color-primary: #061f37;
+  --color-primary-sec: #061f37dd;
+  --color-secondary: #000000;
+  --color-secondary-links: #ffffffcc;
+  --color-icons: #061f37;
+  --color-icons-bg: #e7e8ec;
+  --color-white: #ffffff;
+  --shadows: 0px 0px 15px 1px #f6f7f9;
+  --transition-duration: 0.2s;
+  --padding-right-left: 1.5em;
+} */
 
 /* Base Styles */
 body {
   font-family: "Cairo", sans-serif;
-  background-color: black;
-  color: var(--color-primary);
+  background-color: var(--color-bg);
   margin: 0;
 }
 
@@ -59,8 +84,8 @@ a {
   border: none;
   height: 2.5rem;
   padding: 0 1rem;
-  background-color: var(--color-secondary);
-  color: black;
+  background-color: var(--color-primary);
+  color: var(--color-black);
   font-size: 0.875rem;
   font-weight: 700;
   transition: all 0.2s;
