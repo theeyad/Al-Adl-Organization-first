@@ -1,13 +1,72 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Mobile menu functionality
-  const mobileMenuButton = document.querySelector(".mobile-menu-button");
+  const mobileMenuButton = document.querySelector(".mobile-menu-button button");
   const nav = document.querySelector("nav");
 
   if (mobileMenuButton && nav) {
-    mobileMenuButton.addEventListener("click", function () {
+    mobileMenuButton.addEventListener("click", () => {
       nav.classList.toggle("mobile-nav-active");
+      // Add aria-expanded attribute for accessibility
+      const isExpanded = nav.classList.contains("mobile-nav-active");
+      mobileMenuButton.setAttribute("aria-expanded", isExpanded);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        !nav.contains(e.target) &&
+        !mobileMenuButton.contains(e.target) &&
+        nav.classList.contains("mobile-nav-active")
+      ) {
+        nav.classList.remove("mobile-nav-active");
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    // Close menu when pressing Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.classList.contains("mobile-nav-active")) {
+        nav.classList.remove("mobile-nav-active");
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+      }
     });
   }
+
+  // Update active nav link based on current page
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    // Handle both relative and absolute paths
+    const linkPath = href.startsWith('./') ? href.substring(2) : href;
+    const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+
+    // Check if the link matches the current page
+    if (linkPath === currentPage ||
+        (currentPage === '' && linkPath === 'index.html') ||
+        (currentPage === '' && linkPath === './index.html')) {
+      link.classList.add("active");
+    }
+  });
+
+  // Update copyright year
+  const yearElement = document.querySelector(".copyright-year");
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  // Initialize social media links hover effects
+  const socialLinks = document.querySelectorAll(".social-links a");
+  socialLinks.forEach((link) => {
+    link.addEventListener("mouseenter", function () {
+      this.style.transform = "translateY(-3px)";
+    });
+
+    link.addEventListener("mouseleave", function () {
+      this.style.transform = "translateY(0)";
+    });
+  });
 
   // Dark mode toggle (if implemented)
   const darkModeToggle = document.querySelector("#dark-mode-toggle");

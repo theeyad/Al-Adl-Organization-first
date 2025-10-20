@@ -268,15 +268,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Mobile menu functionality
-  const mobileMenuButton = document.querySelector(".mobile-menu-button");
-  const nav = document.querySelector("nav");
-
-  if (mobileMenuButton && nav) {
-    mobileMenuButton.addEventListener("click", function () {
-      nav.classList.toggle("mobile-nav-active");
-    });
-  }
 
   // Service card hover animations
   const serviceCards = document.querySelectorAll(".service-card");
@@ -310,67 +301,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Dark mode toggle (if implemented)
-  const darkModeToggle = document.querySelector("#dark-mode-toggle");
-  if (darkModeToggle) {
-    darkModeToggle.addEventListener("click", function () {
-      document.documentElement.classList.toggle("dark");
 
-      // Save preference to localStorage
-      const isDark = document.documentElement.classList.contains("dark");
-      localStorage.setItem("darkMode", isDark);
-    });
-
-    // Check for saved user preference
-    const darkModePref = localStorage.getItem("darkMode");
-    if (darkModePref === "true") {
-      document.documentElement.classList.add("dark");
-    }
-  }
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    });
-  });
-
-  // Optional: Add animation on scroll for service cards
-  const animateOnScroll = function () {
-    const cards = document.querySelectorAll(".service-card");
-
-    cards.forEach((card, index) => {
-      const cardTop = card.getBoundingClientRect().top;
-      const cardBottom = card.getBoundingClientRect().bottom;
-
-      if (cardTop < window.innerHeight && cardBottom > 0) {
-        setTimeout(() => {
-          card.style.opacity = "1";
-          card.style.transform = "translateY(0)";
-        }, index * 100);
-      }
-    });
-  };
-
-  // Initialize animations
-  if (document.querySelector(".service-card")) {
-    window.addEventListener("scroll", animateOnScroll);
-    animateOnScroll(); // Initial check
-  }
-
-  // Floating action button click handler
-  const floatingButton = document.querySelector(".floating-action-button");
-  if (floatingButton) {
-    floatingButton.addEventListener("click", function () {
-      // Add your contact form logic here
-      console.log("Contact button clicked");
-    });
-  }
 });
