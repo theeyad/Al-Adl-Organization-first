@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Mobile menu functionality
-  const mobileMenuButton = document.querySelector(".mobile-menu-button button");
+  const mobileMenuButton = document.querySelector(
+    ".mobile-menu-button .toggle"
+  );
   const nav = document.querySelector("nav");
 
   if (mobileMenuButton && nav) {
     mobileMenuButton.addEventListener("click", () => {
       nav.classList.toggle("mobile-nav-active");
+      mobileMenuButton.classList.toggle("active");
       // Add aria-expanded attribute for accessibility
       const isExpanded = nav.classList.contains("mobile-nav-active");
       mobileMenuButton.setAttribute("aria-expanded", isExpanded);
@@ -19,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.contains("mobile-nav-active")
       ) {
         nav.classList.remove("mobile-nav-active");
+        mobileMenuButton.classList.remove("active");
         mobileMenuButton.setAttribute("aria-expanded", "false");
       }
     });
@@ -27,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && nav.classList.contains("mobile-nav-active")) {
         nav.classList.remove("mobile-nav-active");
+        mobileMenuButton.classList.remove("active");
         mobileMenuButton.setAttribute("aria-expanded", "false");
       }
     });
@@ -39,13 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     // Handle both relative and absolute paths
-    const linkPath = href.startsWith('./') ? href.substring(2) : href;
-    const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+    const linkPath = href.startsWith("./") ? href.substring(2) : href;
+    const currentPage = currentPath.substring(currentPath.lastIndexOf("/") + 1);
 
     // Check if the link matches the current page
-    if (linkPath === currentPage ||
-        (currentPage === '' && linkPath === 'index.html') ||
-        (currentPage === '' && linkPath === './index.html')) {
+    if (
+      linkPath === currentPage ||
+      (currentPage === "" && linkPath === "index.html") ||
+      (currentPage === "" && linkPath === "./index.html")
+    ) {
       link.classList.add("active");
     }
   });
