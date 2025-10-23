@@ -15,8 +15,8 @@
   --padding-right-left: 1.5em;
 }
 
-/* Ligh Theme */
-/* :root {
+/* Light Theme */
+:root[data-theme="light"] {
   --color-bg: #f6f7f9;
   --color-header-bg: #ffffff;
   --color-footer-bg: #061f37;
@@ -27,16 +27,27 @@
   --color-icons: #061f37;
   --color-icons-bg: #e7e8ec;
   --color-white: #ffffff;
+  --color-black: #000000;
   --shadows: 0px 0px 15px 1px #f6f7f9;
   --transition-duration: 0.2s;
   --padding-right-left: 1.5em;
-} */
+}
 
 /* Base Styles */
 body {
   font-family: "Cairo", sans-serif;
   background-color: var(--color-bg);
   margin: 0;
+  transition: background-color var(--transition-duration) ease,
+              color var(--transition-duration) ease;
+}
+
+/* Theme transition */
+.theme-transition * {
+  transition: background-color var(--transition-duration) ease,
+              color var(--transition-duration) ease,
+              border-color var(--transition-duration) ease,
+              box-shadow var(--transition-duration) ease !important;
 }
 
 button {

@@ -68,21 +68,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Dark mode toggle (if implemented)
-  const darkModeToggle = document.querySelector("#dark-mode-toggle");
-  if (darkModeToggle) {
-    darkModeToggle.addEventListener("click", function () {
-      document.documentElement.classList.toggle("dark");
+  // Theme toggle functionality
+  const themeToggle = document.querySelector("#theme-toggle");
+  if (themeToggle) {
+    // Load saved theme preference or default to dark
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener("click", function () {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      // Apply new theme
+      document.documentElement.setAttribute("data-theme", newTheme);
+
+      // Update icon
+      updateThemeIcon(newTheme);
 
       // Save preference to localStorage
-      const isDark = document.documentElement.classList.contains("dark");
-      localStorage.setItem("darkMode", isDark);
-    });
+      localStorage.setItem("theme", newTheme);
 
-    // Check for saved user preference
-    const darkModePref = localStorage.getItem("darkMode");
-    if (darkModePref === "true") {
-      document.documentElement.classList.add("dark");
+      // Add transition class for smooth animation
+      document.documentElement.classList.add("theme-transition");
+      setTimeout(() => {
+        document.documentElement.classList.remove("theme-transition");
+      }, 300);
+    });
+  }
+
+  // Function to update theme icon
+  function updateThemeIcon(theme) {
+    const themeToggle = document.querySelector("#theme-toggle");
+    if (themeToggle) {
+      const icon = themeToggle.querySelector("i");
+      if (theme === "dark") {
+        icon.className = "fa-solid fa-moon";
+      } else {
+        icon.className = "fa-solid fa-sun";
+      }
     }
   }
 
